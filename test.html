@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<title>测试</title>
+		<link href="images/tank.ico" rel="shortcut icon">
+		<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/util.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				var message="把该信息传递给Fn函数"; 
+				/*$(".txt").click({msg:message},function(event){$("#idTip").show().html(event.data.msg);});//设置文本 */
+				/*$("div").data("test", { first: 16, last: "pizza!" });*/
+
+					var btn = $(':button');
+		            for(var i = 0, len = btn.length; i < len; i++){
+		                btn.eq(i).data('index', i);
+		                btn.eq(i).click(function(){
+		                    alert($(this).data('index'));
+		                });
+		            }
+		               $("#btn2").data("greeting","aa");
+		            $("#btn2").click(function(){
+						
+						  alert("Greeting is: " + $("div").data("greeting"));
+						});
+
+			})
+		</script>
+	</head>
+	<body>
+		<input type="button" value=" 1 " />
+		<input type="button" value=" 2 " />
+		<input type="button" value=" 3 " />
+		<input type="button" value=" 4 " />
+		<div id="btn2" style="heiht:100px;width:100px;">111</div> 
+		<div id="idTip"></div> 
+
+
+
+	</body>
+</html>
